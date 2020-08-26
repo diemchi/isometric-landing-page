@@ -1,0 +1,355 @@
+/* IMPORT FONT */
+@font-face {
+	font-family: Anton;
+	src: url("../fonts/Anton/Anton-Regular.ttf") format('opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Barlow Condensed';
+	src: url("../fonts/Barlow_Condensed/BarlowCondensed-Regular.ttf") format('opentype');
+	font-weight: 400;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Barlow Condensed';
+	src: url("../fonts/Barlow_Condensed/BarlowCondensed-Medium.ttf") format('opentype');
+	font-weight: 500;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Barlow Condensed';
+	src: url("../fonts/Barlow_Condensed/BarlowCondensed-SemiBold.ttf") format('opentype');
+	font-weight: 600;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'Barlow Condensed';
+	src: url("../fonts/Barlow_Condensed/BarlowCondensed-Bold.ttf") format('opentype');
+	font-weight: 700;
+	font-style: normal;
+}
+
+
+.isometric-wrapper {
+    background-color: black;
+}
+
+.isometric-content {
+    height: 900px;
+    overflow: hidden;
+    background: linear-gradient(130deg, rgb(255, 236, 133) 0%, rgb(236, 104, 91) 100%);
+    z-index: 2;
+}
+
+.shape-right {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.shape-left {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.right-surface-top {
+    z-index: 8;
+    width: 350px;
+    height: 1000px;
+    background: linear-gradient(50deg, rgb(254, 230, 131) 0%, rgb(251, 211, 125) 100%);
+    border-left: 1px solid rgb(254, 230, 131);
+    position: absolute;
+    top: -554px;
+    right: -335px;
+    transform: skew(-64deg, 30deg) scale(0.866, 0.4384);
+    /* annimation */
+    animation: rightSurfaceTop 0.55s ease-in-out;
+    -moz-animation: rightSurfaceTop 0.55s ease-in-out;
+    -webkit-animation: rightSurfaceTop 0.55s ease-in-out;
+    -o-animation: rightSurfaceTop 0.55s ease-in-out;
+}
+
+.right-surface-left {
+    z-index: 9;
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(5deg, rgb(254, 226, 130) 0%, rgb(251, 209, 125) 100%);
+    border-left: 1px solid rgb(254, 226, 130);
+    position: absolute;
+    top: 165px;
+    right: 115px;
+    transform: skew(0deg, 30deg) scale(0.866, 1);
+    /* annimation */
+    animation: rightSurfaceLeft 0.55s ease-in-out;
+    -moz-animation: rightSurfaceLeft 0.55s ease-in-out;
+    -webkit-animation: rightSurfaceLeft 0.55s ease-in-out;
+    -o-animation: rightSurfaceLeft 0.55s ease-in-out;
+}
+
+.right-surface-right {
+    z-index: 10;
+    width: 1000px;
+    height: 350px;
+    background: linear-gradient(50deg, rgb(250, 198, 121) 0%, rgb(245, 164, 110) 100%);
+    border-bottom: 1px solid rgb(250, 198, 121);
+    position: absolute;
+    top: 33px;
+    right: -811px;
+    transform: skew(0deg, -26deg) scale(0.8988, 1);
+    /* annimation */
+    animation: rightSurfaceRight 0.55s ease-in-out;
+    -moz-animation: rightSurfaceRight 0.55s ease-in-out;
+    -webkit-animation: rightSurfaceRight 0.55s ease-in-out;
+    -o-animation: rightSurfaceRight 0.55s ease-in-out;
+}
+
+.left-surface-top {
+    z-index: 11;
+    width: 350px;
+    height: 1000px;
+    background: linear-gradient(50deg, rgb(254, 230, 131) 0%, rgb(251, 211, 125) 100%);
+    border: 1px solid rgb(254, 230, 131);
+    position: absolute;
+    top: 298px;
+    left: 391px;
+    transform: skew(-64deg, 30deg) scale(0.866, 0.4384);
+    /* annimation */
+    animation: leftSurfaceTop 0.55s ease-in-out;
+    -moz-animation: leftSurfaceTop 0.55s ease-in-out;
+    -webkit-animation: leftSurfaceTop 0.55s ease-in-out;
+    -o-animation: leftSurfaceTop 0.55s ease-in-out;
+}
+
+.left-surface-front {
+    z-index: 12;
+    width: 1000px;
+    height: 350px;
+    background: linear-gradient(50deg, rgb(250, 198, 121) 0%, rgb(245, 164, 110) 100%);
+    border: 1px solid rgb(245, 164, 110);
+    position: absolute;
+    top: 886px;
+    left: 218px;
+    transform: skew(0deg, -26deg) scale(0.8988, 1);
+    /* annimation */
+    animation: leftSurfaceFront 0.55s ease-in-out;
+    -moz-animation: leftSurfaceFront 0.55s ease-in-out;
+    -webkit-animation: leftSurfaceFront 0.55s ease-in-out;
+    -o-animation: leftSurfaceFront 0.55s ease-in-out;
+}
+
+.block-text {
+    z-index: 13;
+    font-family: 'Anton', sans-serif;
+    white-space: nowrap;
+    font-size: 120px;
+    font-weight: 400;
+    line-height: 120px;
+    letter-spacing: -4px;
+    position: absolute;
+    top: 300px;
+    left: 995px;
+    transform: skew(0deg, -27deg) scale(0.891, 1);
+     /* annimation */
+    animation: slideDownTextMain 1.2s ease-in-out;
+    -moz-animation: slideDownTextMain 1.2s ease-in-out;
+    -webkit-animation: slideDownTextMain 1.2s ease-in-out;
+    -o-animation: slideDownTextMain 1.2s ease-in-out;
+}
+
+.block-subtext {
+    z-index: 14;
+    color: #fff6ad;
+    line-height: 35px;
+    font-size: 30px;
+    font-family: 'Barlow Condensed', sans-serif;
+    width: 400px;
+    position: absolute;
+    top: 530px;
+    left: 1185px;
+    transform: skew(0deg, -27deg) scale(0.891, 1);
+    /* annimation */
+    animation: slideUpTextSub 1.2s ease-in-out;
+    -moz-animation: slideUpTextSub 1.2s ease-in-out;
+    -webkit-animation: slideUpTextSub 1.2s ease-in-out;
+    -o-animation: slideUpTextSub 1.2s ease-in-out;
+}
+
+.block-computer {
+    z-index: 15;
+    position: absolute;
+    top: 364px;
+    left: 590px;
+    width: 419px;
+    height: 417px;
+    /* annimation */
+    animation: slideLeftToRight 1.2s ease-in-out;
+    -moz-animation: slideLeftToRight 1.2s ease-in-out;
+    -webkit-animation: slideLeftToRight 1.2s ease-in-out;
+    -o-animation: slideLeftToRight 1.2s ease-in-out;
+}
+
+.computer-screen-img {
+    z-index: 16;
+    width: 255px;
+    height: 176px;
+    background: url('../img/tech-slider-1-macbook-screen.jpg') no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 75px;
+    left: -1px;
+    transform: skew(0deg, -26deg) scale(0.8988, 1);
+}
+
+.computer-screen-bg {
+    z-index: 17;
+    width: 232px;
+    height: 289px;
+    opacity: 0.994;
+    position: absolute;
+    top: 25px;
+    left: 28px;
+}
+
+.computer-screen-bg img {
+    width: 232px;
+    height: 289px;
+}
+
+.computer-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}
+
+.layer-1 .computer-screen-img {
+    z-index: 18;
+    background: url('../img/tech-slider-1-macbook-screen-1.jpg') no-repeat center center;
+    top: 83px;
+    left: 18px; 
+}
+
+.layer-1.computer-screen {
+    z-index: 19;
+    /* annimation */
+    animation: screenComputerLayerMove2 5.1s ease-in-out;;
+    -moz-animation: screenComputerLayerMove2 5.1s ease-in-out;;
+    -webkit-animation: screenComputerLayerMove2 5.1s ease-in-out;;
+    -o-animation: screenComputerLayerMove2 5.1s ease-in-out;;
+}
+
+.layer-2 .computer-screen-bg {
+    z-index: 10;
+    top: 38px;
+    left: 48px; 
+}
+
+.layer-2 .computer-screen-img { 
+    z-index: 21;
+    background: url('../img/tech-slider-1-macbook-screen-2.jpg') no-repeat center center;
+    top: 97px;
+    left: 38px;
+}
+
+.layer-2.computer-screen {
+    z-index: 22;
+    /* annimation */
+    animation: screenComputerLayerMove 3.5s ease-in-out;
+    -moz-animation: screenComputerLayerMove 3.5s ease-in-out;
+    -webkit-animation: screenComputerLayerMove 3.5s ease-in-out;
+    -o-animation: screenComputerLayerMove 3.5s ease-in-out;
+}
+ 
+.layer-3 .computer-screen-bg {
+    z-index: 23;
+    top: 56px;
+    left: 70px;
+}
+
+.layer-3 .computer-screen-img { 
+    z-index: 24;
+    background: url('../img/tech-slider-1-macbook-screen-3.jpg') no-repeat center center;
+    top: 114px;
+    left: 60px;
+}
+
+.layer-3.computer-screen {
+    z-index: 25;
+    /* annimation */
+    animation: screenComputerLayer 2.3s ease-in-out;
+    -moz-animation: screenComputerLayer 2.3s ease-in-out;
+    -webkit-animation: screenComputerLayer 2.3s ease-in-out;
+    -o-animation: screenComputerLayer 2.3s ease-in-out;
+}
+
+
+@keyframes rightSurfaceTop {
+    0%    {transform: skew(-64deg, 30deg) scale(0.866, 0.4384) translate3d(0,-350px,0);}
+    100%  {transform: skew(-64deg, 30deg) scale(0.866, 0.4384) translate3d(0,0,100px);}
+}
+
+@keyframes rightSurfaceLeft {
+    0%    {transform: skew(0deg, 30deg) scale(0.866, 1) translate3d(350px,-350px,0);}
+    100%  {transform: skew(0deg, 30deg) scale(0.866, 1) translate3d(0,0,100px);}
+}
+
+@keyframes rightSurfaceRight {
+    0%    {transform: skew(0deg, -26deg) scale(0.8988, 1) translate3d(345px,0,0);}
+    100%  {transform: skew(0deg, -26deg) scale(0.8988, 1) translate3d(0,0,100px);}
+}
+
+@keyframes leftSurfaceTop {
+    0%    {transform: skew(-64deg, 30deg) scale(0.866, 0.4384) translate3d(0,350px,0);}
+    100%  {transform: skew(-64deg, 30deg) scale(0.866, 0.4384) translate3d(0,0,-50px);}
+}
+
+@keyframes leftSurfaceFront {
+    0%    {transform: skew(0deg, -26deg) scale(0.8988, 1) translate3d(-350px,0,0);}
+    100%  {transform: skew(0deg, -26deg) scale(0.8988, 1) translate3d(0,0,-50px);}
+}
+
+@keyframes slideDownTextMain {
+    0%    {transform: skew(0deg, -27deg) scale(0.891, 1) translateY(-800px);}
+    50%   {transform: skew(0deg, -27deg) scale(0.891, 1) translateY(-800px);}
+    100%  {transform: skew(0deg, -27deg) scale(0.891, 1) translateY(0);}
+}
+
+@keyframes slideUpTextSub {
+    0%    {transform: skew(0deg, -27deg) scale(0.891, 1) translateY(500px);}
+    50%   {transform: skew(0deg, -27deg) scale(0.891, 1) translateY(500px);}
+    100%  {transform: skew(0deg, -27deg) scale(0.891, 1) translateY(0);}
+}
+
+@keyframes slideLeftToRight {
+    0%    {transform: translate3d(-900px,490px,0);}
+    50%   {transform: translate3d(-900px,490px,0);}
+    100%  {transform: translate3d(0,0,100px);}
+}
+
+@keyframes screenComputerLayer {
+    0%    {transform: translate3d(0,0,0); opacity: 1;}
+    70%   {transform: translate3d(0,0,0); opacity: 1;}
+    100%  {transform: translate3d(500px,-250px,100px);opacity: 0;}
+}
+
+@keyframes screenComputerLayerMove {
+    0%    {transform: translate3d(0,0,0); opacity: 1;}
+    68%    {transform: translate3d(0,0,0); opacity: 1;}
+    75%   {transform: translate3d(25px,15px,0); opacity: 1;}
+    85%   {transform: translate3d(25px,15px,0); opacity: 1;}
+    100%  {transform: translate3d(500px,-250px,100px);opacity: 0;}
+}
+
+@keyframes screenComputerLayerMove2 {
+    0%    {transform: translate3d(0,0,0); opacity: 1;}
+    68%   {transform: translate3d(0,0,0); opacity: 1;}
+    75%   {transform: translate3d(50px,30px,0); opacity: 1;}
+    85%   {transform: translate3d(50px,30px,0); opacity: 1;}
+    100%  {transform: translate3d(500px,-250px,100px);opacity: 0;}
+}
