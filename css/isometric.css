@@ -68,7 +68,12 @@
     top: -554px;
     right: -335px;
     transform: skew(-64deg, 30deg) scale(0.866, 0.4384);
-    /* annimation */
+    transition: all 0.2s;
+    opacity: 0;
+}
+
+.animation-in .right-surface-top {
+    opacity: 1;
     animation: rightSurfaceTop 0.55s ease-in-out;
     -moz-animation: rightSurfaceTop 0.55s ease-in-out;
     -webkit-animation: rightSurfaceTop 0.55s ease-in-out;
@@ -85,7 +90,12 @@
     top: 165px;
     right: 115px;
     transform: skew(0deg, 30deg) scale(0.866, 1);
-    /* annimation */
+    transition: all 0.2s;
+    opacity: 0;
+}
+
+.animation-in .right-surface-left {
+    opacity: 1;
     animation: rightSurfaceLeft 0.55s ease-in-out;
     -moz-animation: rightSurfaceLeft 0.55s ease-in-out;
     -webkit-animation: rightSurfaceLeft 0.55s ease-in-out;
@@ -102,7 +112,12 @@
     top: 33px;
     right: -811px;
     transform: skew(0deg, -26deg) scale(0.8988, 1);
-    /* annimation */
+    transition: all 0.2s;
+    opacity: 0;
+}
+
+.animation-in .right-surface-right {
+    opacity: 1;
     animation: rightSurfaceRight 0.55s ease-in-out;
     -moz-animation: rightSurfaceRight 0.55s ease-in-out;
     -webkit-animation: rightSurfaceRight 0.55s ease-in-out;
@@ -119,7 +134,12 @@
     top: 298px;
     left: 391px;
     transform: skew(-64deg, 30deg) scale(0.866, 0.4384);
-    /* annimation */
+    transition: all 0.2s;
+    opacity: 0;
+}
+
+.animation-in .left-surface-top {
+    opacity: 1;
     animation: leftSurfaceTop 0.55s ease-in-out;
     -moz-animation: leftSurfaceTop 0.55s ease-in-out;
     -webkit-animation: leftSurfaceTop 0.55s ease-in-out;
@@ -135,8 +155,13 @@
     position: absolute;
     top: 886px;
     left: 218px;
-    transform: skew(0deg, -26deg) scale(0.8988, 1);
-    /* annimation */
+    transform: skew(0deg, -26deg) scale(0.8988, 1); 
+    transition: all 0.2s;
+    opacity: 0;
+}
+
+.animation-in .left-surface-front { 
+    opacity: 1;
     animation: leftSurfaceFront 0.55s ease-in-out;
     -moz-animation: leftSurfaceFront 0.55s ease-in-out;
     -webkit-animation: leftSurfaceFront 0.55s ease-in-out;
@@ -155,11 +180,23 @@
     top: 300px;
     left: 995px;
     transform: skew(0deg, -27deg) scale(0.891, 1);
-     /* annimation */
+    transition: all 0.2s;
+    opacity: 0;
+}
+
+.animation-in .block-text {
+    opacity: 1;
     animation: slideDownTextMain 1.2s ease-in-out;
     -moz-animation: slideDownTextMain 1.2s ease-in-out;
     -webkit-animation: slideDownTextMain 1.2s ease-in-out;
     -o-animation: slideDownTextMain 1.2s ease-in-out;
+}
+
+.animation-out .block-text {
+    animation: slideUpTextMain 0.6s ease-in-out;
+    -moz-animation: slideUpTextMain 0.6s ease-in-out;
+    -webkit-animation: slideUpTextMain 0.6s ease-in-out;
+    -o-animation: slideUpTextMain 0.6s ease-in-out;
 }
 
 .block-subtext {
@@ -172,12 +209,24 @@
     position: absolute;
     top: 530px;
     left: 1185px;
-    transform: skew(0deg, -27deg) scale(0.891, 1);
-    /* annimation */
+    transform: skew(0deg, -27deg) scale(0.891, 1);  
+    transition: all 0.2s; 
+    opacity: 0;
+}
+
+.animation-in .block-subtext {
+    opacity: 1;
     animation: slideUpTextSub 1.2s ease-in-out;
     -moz-animation: slideUpTextSub 1.2s ease-in-out;
     -webkit-animation: slideUpTextSub 1.2s ease-in-out;
     -o-animation: slideUpTextSub 1.2s ease-in-out;
+}
+
+.animation-out .block-subtext {
+    animation: slideDownTextSub 0.2s ease-in-out;
+   -moz-animation: slideDownTextSub 0.2s ease-in-out;
+   -webkit-animation: slideDownTextSub 0.2s ease-in-out;
+   -o-animation: slideDownTextSub 0.2s ease-in-out;
 }
 
 .block-computer {
@@ -187,7 +236,11 @@
     left: 590px;
     width: 419px;
     height: 417px;
-    /* annimation */
+    opacity: 0;    
+}
+
+.animation-in .block-computer {
+    opacity: 1;
     animation: slideLeftToRight 1.2s ease-in-out;
     -moz-animation: slideLeftToRight 1.2s ease-in-out;
     -webkit-animation: slideLeftToRight 1.2s ease-in-out;
@@ -204,6 +257,7 @@
     top: 75px;
     left: -1px;
     transform: skew(0deg, -26deg) scale(0.8988, 1);
+    transition: all 0.2s;
 }
 
 .computer-screen-bg {
@@ -235,13 +289,13 @@
     left: 18px; 
 }
 
-.layer-1.computer-screen {
+.animation-in .layer-1.computer-screen {
     z-index: 19;
     /* annimation */
-    animation: screenComputerLayerMove2 5.1s ease-in-out;;
-    -moz-animation: screenComputerLayerMove2 5.1s ease-in-out;;
-    -webkit-animation: screenComputerLayerMove2 5.1s ease-in-out;;
-    -o-animation: screenComputerLayerMove2 5.1s ease-in-out;;
+    animation: screenComputerLayerMove2 5.1s ease-in-out;
+    -moz-animation: screenComputerLayerMove2 5.1s ease-in-out;
+    -webkit-animation: screenComputerLayerMove2 5.1s ease-in-out;
+    -o-animation: screenComputerLayerMove2 5.1s ease-in-out;
 }
 
 .layer-2 .computer-screen-bg {
@@ -257,7 +311,7 @@
     left: 38px;
 }
 
-.layer-2.computer-screen {
+.animation-in .layer-2.computer-screen {
     z-index: 22;
     /* annimation */
     animation: screenComputerLayerMove 3.5s ease-in-out;
@@ -279,7 +333,7 @@
     left: 60px;
 }
 
-.layer-3.computer-screen {
+.animation-in .layer-3.computer-screen {
     z-index: 25;
     /* annimation */
     animation: screenComputerLayer 2.3s ease-in-out;
@@ -288,6 +342,296 @@
     -o-animation: screenComputerLayer 2.3s ease-in-out;
 }
 
+
+.animation-out .right-surface-top, 
+.animation-out .right-surface-left, 
+.animation-out .right-surface-right,
+.animation-out .left-surface-top,
+.animation-out .left-surface-front,
+.animation-out .block-computer,
+.animation-out .left-blue-surface-top,
+.animation-out .left-blue-surface-left,
+.animation-out .left-blue-surface-front,
+.animation-out .right-blue-surface-top,
+.animation-out .right-blue-surface-front {
+    animation: opacityElement 0.001s ease-in-out;
+    -moz-animation: opacityElement 0.001s ease-in-out;
+    -webkit-animation: opacityElement 0.001s ease-in-out;
+    -o-animation: opacityElement 0.001s ease-in-out;
+}
+
+.isometric-content-slide2 {
+    height: 900px;
+    overflow: hidden;
+    background: linear-gradient(130deg, rgb(60, 239, 255) 0%, rgb(125, 91, 236) 100%);
+    z-index: 2;
+} 
+
+.shape-right-blue {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.shape-left-blue {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.left-blue-surface-top {
+    z-index: 1;
+    width: 350px;
+    height: 1000px;
+    background: linear-gradient(50deg, rgb(61, 238, 254) 0%, rgb(141, 165, 254) 100%);
+    position: absolute;
+    bottom: -143px;
+    left: 728px;
+    transform: skew(-64deg, 30deg) scale(0.866, 0.4384);
+    opacity: 0;
+}
+
+.animation-in .left-blue-surface-top {
+    opacity: 1;
+    animation: bottomToCenterSurfaceTop 0.56s ease-in-out;
+    -moz-animation: bottomToCenterSurfaceTop 0.56s ease-in-out;
+    -webkit-animation: bottomToCenterSurfaceTop 0.56s ease-in-out;
+    -o-animation: bottomToCenterSurfaceTop 0.56s ease-in-out;
+}
+
+.left-blue-surface-left {
+    z-index: 2;
+    width: 350px;
+    height: 350px;
+    background: linear-gradient(130deg, rgb(132, 243, 254) 0%, rgb(121, 240, 252) 100%);
+    position: absolute;
+    bottom: -212px;
+    right: -630px;
+    transform: skew(0deg, 30deg) scale(0.866, 1);
+    opacity: 0;
+}
+
+.animation-in .left-blue-surface-left {
+    opacity: 1;
+    animation: bottomToCenterSurfaceLeft 0.55s ease-in-out;
+    -moz-animation: bottomToCenterSurfaceLeft 0.55s ease-in-out;
+    -webkit-animation: bottomToCenterSurfaceLeft 0.55s ease-in-out;
+    -o-animation: bottomToCenterSurfaceLeft 0.55s ease-in-out;
+}
+
+.left-blue-surface-front {
+    z-index: 3;
+    width: 1000px;
+    height: 350px;
+    background: linear-gradient(50deg, rgb(45, 217, 235) 0%, rgb(109, 82, 230) 100%);
+    position: absolute;
+    bottom: -80px;
+    left: 556px;
+    transform: skew(0deg, -26deg) scale(0.8988, 1);
+    opacity: 0;
+}
+
+.animation-in .left-blue-surface-front {
+    opacity: 1;
+    animation: bottomToCenterSurfaceFront 0.55s ease-in-out;
+    -moz-animation: bottomToCenterSurfaceFront 0.55s ease-in-out;
+    -webkit-animation: bottomToCenterSurfaceFront 0.55s ease-in-out;
+    -o-animation: bottomToCenterSurfaceFront 0.55s ease-in-out;
+}
+
+
+.right-blue-surface-top {
+    z-index: 4;
+    width: 350px;
+    height: 1000px;
+    background: linear-gradient(50deg, rgb(61, 238, 254) 0%, rgb(141, 165, 254) 100%);
+    position: absolute;
+    bottom: -380px;
+    right: -170px;
+    transform: skew(64deg, -27deg) scale(0.891, 0.4384);
+    opacity: 0;
+}
+
+.animation-in .right-blue-surface-top {
+    opacity: 1;
+    animation: rightBottomSurfaceTop 1.3s ease-in-out;
+    -moz-animation: rightBottomSurfaceTop 1.3s ease-in-out;
+    -webkit-animation: rightBottomSurfaceTop 1.3s ease-in-out;
+    -o-animation: rightBottomSurfaceTop 1.3s ease-in-out;
+}
+
+.right-blue-surface-front {
+    z-index: 5;
+    width: 1000px;
+    height: 350px;
+    background: linear-gradient(50deg, rgb(45, 217, 235) 0%, rgb(109, 82, 230) 100%);
+    position: absolute;
+    bottom: -310px;
+    right: -340px;
+    transform: skew(0deg, 26deg) scale(0.8988, 1);
+    opacity: 0;
+}
+
+.animation-in .right-blue-surface-front {
+    opacity: 1;
+    animation: rightBottomSurfaceFront 1.3s ease-in-out;
+    -moz-animation: rightBottomSurfaceFront 1.3s ease-in-out;
+    -webkit-animation: rightBottomSurfaceFront 1.3s ease-in-out;
+    -o-animation: rightBottomSurfaceFront 1.3s ease-in-out;
+}
+
+.block-blue-text {
+    z-index: 6;
+    font-family: 'Anton';
+    line-height: 120px;
+    letter-spacing: -4px;
+    font-weight: 400;
+    font-size: 120px;
+    position: absolute;
+    bottom: 323px;
+    left: 465px;
+    transform: skew(0deg, -27deg) scale(0.891, 1);
+    opacity: 0;
+}
+
+.animation-in .block-blue-text {
+    opacity: 1;
+    animation: slideDownTextMainBlue 1s ease-in-out;
+   -moz-animation: slideDownTextMainBlue 1s ease-in-out;
+   -webkit-animation: slideDownTextMainBlue 1s ease-in-out;
+   -o-animation: slideDownTextMainBlue 1s ease-in-out;
+}
+
+.animation-out .block-blue-text {
+   animation: slideLeftTextMainBlue 0.6s ease-in-out;
+   -moz-animation: slideLeftTextMainBlue 0.6s ease-in-out;
+   -webkit-animation: slideLeftTextMainBlue 0.6s ease-in-out;
+   -o-animation: slideLeftTextMainBlue 0.6s ease-in-out;
+}
+
+.block-blue-subtext {
+    z-index: 7;
+    font-family: "Barlow Condensed";
+    line-height: 35px;
+    letter-spacing: 0;
+    font-weight: 500;
+    font-size: 30px;
+    position: absolute;
+    top: 215px;
+    right: 270px;
+    width: 400px;
+    transform: skew(0deg, 29deg) scale(0.8746, 1);
+    opacity: 0;
+}
+
+.animation-in .block-blue-subtext {
+    opacity: 1;
+    animation: slideDownTextSubBlue 1.3s ease-in-out;
+   -moz-animation: slideDownTextSubBlue 1.3s ease-in-out;
+   -webkit-animation: slideDownTextSubBlue 1.3s ease-in-out;
+   -o-animation: slideDownTextSubBlue 1.3s ease-in-out;
+}
+
+.animation-out .block-blue-subtext {
+    animation: slideRightTextSubBlue 0.6s ease-in-out;
+   -moz-animation: slideRightTextSubBlue 0.6s ease-in-out;
+   -webkit-animation: slideRightTextSubBlue 0.6s ease-in-out;
+   -o-animation: slideRightTextSubBlue 0.6s ease-in-out;
+}
+
+.block-blue-computer {
+    z-index: 8;
+    position: absolute;
+    bottom: 152px;
+    left: 598px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+
+.animation-in .block-blue-computer {
+    opacity: 1;
+    animation: slideLeftToRight 1s ease-in-out;
+    -moz-animation: slideLeftToRight 1s ease-in-out;
+    -webkit-animation: slideLeftToRight 1s ease-in-out;
+    -o-animation: slideLeftToRight 1s ease-in-out;
+}
+
+.animation-out .block-blue-computer {
+    animation: slideCenterTotop 1s ease-in-out;
+    -moz-animation: slideCenterTotop 1s ease-in-out;
+    -webkit-animation: slideCenterTotop 1s ease-in-out;
+    -o-animation: slideCenterTotop 1s ease-in-out;
+}
+
+.computer-blue-iphone {
+    z-index: 17;
+    width: 189px;
+    height: 93px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.computer-blue-iphone img {
+    width: 189px;
+    height: 93px;
+}
+
+.blue-iphone-img {
+    background: url('../img/tech-slider-2-iphone-screen.jpg') no-repeat center center;
+    background-size: cover;
+    width: 54px;
+    height: 92px;
+    transform: skew(63deg, -26deg) scale(0.8988, 0.454);
+    position: absolute;
+    top: -3px;
+    left: 66px;
+}
+
+.computer-blue-ipad {
+    z-index: 17;
+    width: 315px;
+    height: 156px;
+    position: absolute;
+    bottom: 82px;
+    left: 149px;
+    transform: skew(-2deg, 0deg) scale(1, 0.9994);
+}
+
+.computer-blue-ipad img {
+    width: 315px;
+    height: 156px;
+}
+
+.blue-ipad-img {
+    background: url('../img/tech-slider-2-ipad-screen.jpg') no-repeat center center;
+    background-size: cover;
+    width: 172px;
+    height: 125px;
+    transform: skew(63deg, -26deg) scale(0.8988, 0.454);
+    position: absolute;
+    top: 12px;
+    left: 66px;
+}
+
+.computer-blue-main {
+    z-index: 18;
+    position: absolute;
+    bottom: 222px;
+    left: 379px;
+}
+
+.blue-computer-img {
+    background: url('../img/tech-slider-1-macbook-screen.jpg') no-repeat center center;
+    background-size: cover;
+    width: 255px;
+    height: 180px;
+    transform: skew(0deg, -26deg) scale(0.8988, 1);
+    position: absolute;
+    top: 77px;
+    left: -2px;
+}
 
 @keyframes rightSurfaceTop {
     0%    {transform: skew(-64deg, 30deg) scale(0.866, 0.4384) translate3d(0,-350px,0);}
@@ -314,6 +658,11 @@
     100%  {transform: skew(0deg, -26deg) scale(0.8988, 1) translate3d(0,0,-50px);}
 }
 
+@keyframes slideUpTextMain {
+    0%    {transform: skew(0deg, -27deg) scale(0.891, 1) translateY(0);}
+    100%  {transform: skew(0deg, -27deg) scale(0.891, 1) translateY(-800px);}
+}
+
 @keyframes slideDownTextMain {
     0%    {transform: skew(0deg, -27deg) scale(0.891, 1) translateY(-800px);}
     50%   {transform: skew(0deg, -27deg) scale(0.891, 1) translateY(-800px);}
@@ -326,10 +675,20 @@
     100%  {transform: skew(0deg, -27deg) scale(0.891, 1) translateY(0);}
 }
 
+@keyframes slideDownTextSub {
+    0%    {transform: skew(0deg, -27deg) scale(0.891, 1) translateY(0);}
+    100%  {transform: skew(0deg, -27deg) scale(0.891, 1) translateY(500px);}
+}
+
+@keyframes opacityElement {
+    0%    {opacity: 0;}
+    100%  {opacity: 0;}
+}
+
 @keyframes slideLeftToRight {
-    0%    {transform: translate3d(-900px,490px,0);}
-    50%   {transform: translate3d(-900px,490px,0);}
-    100%  {transform: translate3d(0,0,100px);}
+    0%    {transform: translate3d(-900px,490px,0);opacity: 0;}
+    50%   {transform: translate3d(-900px,490px,0);opacity: 0;}
+    100%  {transform: translate3d(0,0,100px);opacity: 1;}
 }
 
 @keyframes screenComputerLayer {
@@ -340,7 +699,7 @@
 
 @keyframes screenComputerLayerMove {
     0%    {transform: translate3d(0,0,0); opacity: 1;}
-    68%    {transform: translate3d(0,0,0); opacity: 1;}
+    68%   {transform: translate3d(0,0,0); opacity: 1;}
     75%   {transform: translate3d(25px,15px,0); opacity: 1;}
     85%   {transform: translate3d(25px,15px,0); opacity: 1;}
     100%  {transform: translate3d(500px,-250px,100px);opacity: 0;}
@@ -353,3 +712,58 @@
     85%   {transform: translate3d(50px,30px,0); opacity: 1;}
     100%  {transform: translate3d(500px,-250px,100px);opacity: 0;}
 }
+
+@keyframes bottomToCenterSurfaceTop {
+    0%    {transform: skew(-64deg, 30deg) scale(0.866, 0.4384) translate(300px,300px);}
+    100%  {transform: skew(-64deg, 30deg) scale(0.866, 0.4384) translate(0,0);}
+}
+
+@keyframes bottomToCenterSurfaceLeft {
+    0%    {transform: skew(0deg, 30deg) scale(0.866, 1) translate(0,300px);}
+    100%  {transform: skew(0deg, 30deg) scale(0.866, 1) translate(0,0);}
+}
+
+@keyframes bottomToCenterSurfaceFront {
+    0%    {transform: skew(0deg, -26deg) scale(0.8988, 1) translate(0,300px);}
+    100%  {transform: skew(0deg, -26deg) scale(0.8988, 1) translate(0,0);}
+}
+
+@keyframes rightBottomSurfaceTop {
+    0%    {transform: skew(64deg, -27deg) scale(0.891, 0.4384) translate(0,800px);}
+    50%   {transform: skew(64deg, -27deg) scale(0.891, 0.4384) translate(0,800px);}
+    100%  {transform: skew(64deg, -27deg) scale(0.891, 0.4384) translate(0,0);}
+}
+
+@keyframes rightBottomSurfaceFront {
+    0%    {transform: skew(0deg, 26deg) scale(0.8988, 1) translate(800px,0);}
+    50%   {transform: skew(0deg, 26deg) scale(0.8988, 1) translate(800px,0);}
+    100%  {transform: skew(0deg, 26deg) scale(0.8988, 1) translate(0,0);}
+}
+
+@keyframes slideDownTextMainBlue {
+    0%    {transform: skew(0deg, -27deg) scale(0.891, 1) translateY(-800px);}
+    50%   {transform: skew(0deg, -27deg) scale(0.891, 1) translateY(-800px);}
+    100%  {transform: skew(0deg, -27deg) scale(0.891, 1) translateY(0);}
+}
+
+@keyframes slideLeftTextMainBlue { 
+    0%    {transform: skew(0deg, -27deg) scale(0.891, 1) translateX(0);}
+    100%  {transform: skew(0deg, -27deg) scale(0.891, 1) translateX(-800px);}
+}
+
+@keyframes slideDownTextSubBlue {
+    0%    {transform: skew(0deg, 29deg) scale(0.8746, 1) translateY(-800px);}
+    50%   {transform: skew(0deg, 29deg) scale(0.8746, 1) translateY(-800px);}
+    100%  {transform: skew(0deg, 29deg) scale(0.8746, 1) translateY(0);}
+}
+
+@keyframes slideRightTextSubBlue {
+    0%    {transform: skew(0deg, 29deg) scale(0.8746, 1) translate3d(0,0,0);}
+    100%  {transform: skew(0deg, 29deg) scale(0.8746, 1) translate3d(300px,-300px,300px)}
+}
+
+@keyframes slideCenterTotop {
+    0%    {transform: translate3d(0,0,0);}
+    100%  {transform: translate3d(-1000px,-1000px,-500px)}
+}
+
